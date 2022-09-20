@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FaGithub } from "react-icons/fa";
-import PropTypes from "prop-types";
+import React from 'react'
+import {Link} from 'react-router-dom'
+import {FaGithub} from 'react-icons/fa'
+import PropTypes from 'prop-types'
 
-function Navbar({ title, theme }) {
+function Navbar({title,theme}) {
   return (
     <div className="navbar text-white shadow-lg" data-theme={theme}>
       <div className="flex-1 ml-4 mx-auto">
@@ -18,11 +18,11 @@ function Navbar({ title, theme }) {
       <div className="flex-none justify-end">
         <ul className="menu menu-horizontal p-0">
           <li className="font-bold hover:italic">
-            <Link to="/">home</Link>
+            <a>home</a>
           </li>
 
           <li className="font-bold hover:italic">
-            <Link to="/about">about</Link>
+            <a>about</a>
           </li>
         </ul>
       </div>
@@ -30,12 +30,12 @@ function Navbar({ title, theme }) {
   );
 }
 
-Navbar.defaultProps = {
-  title: "Github Finder",
-  theme: "cyberpunk",
-};
+Navbar.defaultProps={
+    title:'Github Finder',
+    theme :'cyberpunk'
+}
 
-Navbar.propTypes = {
-  title: PropTypes.string,
-};
-export default Navbar;
+Navbar.propTypes={
+    title:PropTypes.string
+}
+export default Navbar
