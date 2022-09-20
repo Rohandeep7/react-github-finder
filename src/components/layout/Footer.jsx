@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 
 function Footer() {
   return (
@@ -47,4 +47,4 @@ function Footer() {
   );
 }
 
-export default Footer
+export default Footer;
