@@ -30,4 +30,8 @@ function Alert({ type, message }) {
   );
 }
 
+Alert.defaultProps={
+  type:"error"
+}
+
 export default Alert;
