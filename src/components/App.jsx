@@ -5,14 +5,9 @@ import Footer from "./layout/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import { SearchProvider } from "./context/SearchContext";
-import {ApiProvider} from "./context/ApiContext"
 function App() {
   return (
     <>
-    
-      <SearchProvider>
-      <ApiProvider>
         <div
           className="flex flex-col justify-between h-screen"
           data-theme="dark"
@@ -27,10 +22,7 @@ function App() {
           </main>
 
           <Footer theme="dark" />
-        </div>
-        </ApiProvider>
-      </SearchProvider>
-      
+        </div>    
     </>
   );
 }
