@@ -6,7 +6,6 @@ function SearchBar({ theme }) {
   const { input, changeInput } = useContext(SearchContext);
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     changeInput(e.target.value);
   };
 
@@ -20,7 +19,7 @@ function SearchBar({ theme }) {
           value={input}
           onChange={(e) => handleChange(e)}
         />
-        <Button size="lg">
+        <Button size='lg'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

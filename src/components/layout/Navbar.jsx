@@ -18,11 +18,11 @@ function Navbar({title,theme}) {
       <div className="flex-none justify-end">
         <ul className="menu menu-horizontal p-0">
           <li className="font-bold hover:italic">
-            <a href="/">home</a>
+            <Link to='/'>home</Link>
           </li>
 
           <li className="font-bold hover:italic">
-            <a href="/">about</a>
+            <Link to='/about'>about</Link>
           </li>
         </ul>
       </div>

@@ -1,8 +1,9 @@
 import React from "react";
-
+import {Zoom} from '@mui/material'
 function About() {
   return (
-    <div className="hero py-40 bg-base-200">
+    <Zoom in={true}>
+        <div className="hero py-40 bg-base-200">
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">About Me</h1>
@@ -14,6 +15,8 @@ function About() {
         </div>
       </div>
     </div>
+    </Zoom>
+    
   );
 }
 

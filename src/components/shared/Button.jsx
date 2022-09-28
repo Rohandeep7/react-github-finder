@@ -5,7 +5,7 @@ import ApiContext from "../context/ApiContext"
 function Button({ children, size, color, shape }) {
   const { input, toggleAlert } = useContext(SearchContext);
   const [isDisabled, setIsDisabled] = useState(false);
-  const {users}=useContext(ApiContext)
+  const {users, changeButtonForm}=useContext(ApiContext)
   const handleClick = () => {
     if (input === "") {
       setIsDisabled((prev) => !prev);
@@ -16,7 +16,8 @@ function Button({ children, size, color, shape }) {
       }, 3000);
     }
     else{
-      console.log(users.items)
+      changeButtonForm()
+      
     }
   };
 

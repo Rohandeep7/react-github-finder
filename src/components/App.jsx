@@ -10,8 +10,9 @@ import {ApiProvider} from "./context/ApiContext"
 function App() {
   return (
     <>
-    <ApiProvider>
+    
       <SearchProvider>
+      <ApiProvider>
         <div
           className="flex flex-col justify-between h-screen"
           data-theme="dark"
@@ -27,8 +28,9 @@ function App() {
 
           <Footer theme="dark" />
         </div>
+        </ApiProvider>
       </SearchProvider>
-      </ApiProvider>
+      
     </>
   );
 }
