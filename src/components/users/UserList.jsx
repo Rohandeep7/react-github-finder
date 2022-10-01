@@ -15,7 +15,7 @@ function UserList() {
 
   return !loading ?  (
     <>
-      <div className='grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10'>
         {users.map((user)=>{
             return <UserItem key={user.id} user={user}/>
         })}
