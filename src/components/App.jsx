@@ -5,9 +5,11 @@ import Footer from "./layout/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import {GithubProvider} from '../context/GithubContext'
 function App() {
   return (
     <>
+      <GithubProvider>
         <div
           className="flex flex-col justify-between h-screen"
           data-theme="dark"
@@ -22,7 +24,8 @@ function App() {
           </main>
 
           <Footer theme="dark" />
-        </div>    
+        </div>
+      </GithubProvider>
     </>
   );
 }
