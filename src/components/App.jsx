@@ -12,7 +12,6 @@ function App() {
       <GithubProvider>
         <div
           className="flex flex-col justify-between h-screen"
-          data-theme="dark"
         >
           <Navbar theme="dark" />
           <main className="container mx-auto px-3 pb-5">
@@ -23,7 +22,7 @@ function App() {
             </Routes>
           </main>
 
-          <Footer theme="dark" />
+          <Footer />
         </div>
       </GithubProvider>
     </>

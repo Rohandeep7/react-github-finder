@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 function Navbar({title,theme}) {
   return (
-    <div className="navbar text-white shadow-lg" data-theme={theme}>
+    <div className="navbar shadow-lg" data-theme={theme}>
       <div className="flex-1 ml-4 mx-auto">
         <a href="https://github.com/" target="blank" className="btn btn-ghost">
           <FaGithub className="text-2xl" />
@@ -17,11 +17,11 @@ function Navbar({title,theme}) {
       </div>
       <div className="flex-none justify-end">
         <ul className="menu menu-horizontal p-0">
-          <li className="font-bold hover:italic">
+          <li className="font-bold ">
             <Link to='/'>home</Link>
           </li>
 
-          <li className="font-bold hover:italic">
+          <li className="font-bold">
             <Link to='/about'>about</Link>
           </li>
         </ul>
