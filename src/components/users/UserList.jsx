@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Spinner from '../shared/Spinner';
 import UserItem from './UserItem';
-import GithubContext from '../../context/GithubContext';
+import GithubContext from '../../context/github/GithubContext';
 import { useContext } from 'react';
 function UserList() {
   const {users,loading,searchUsers}=useContext(GithubContext)
