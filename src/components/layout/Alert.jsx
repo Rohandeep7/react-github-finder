@@ -9,7 +9,7 @@ function Alert() {
   console.log(alert)
   return (
     alert !== null && (
-      <div className={`alert alert-${alert.type} shadow-lg`}>
+      <div className={`alert max-w-xs mx-auto alert-${alert.type} shadow-lg`}>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

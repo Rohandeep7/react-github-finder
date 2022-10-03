@@ -28,7 +28,7 @@ function UserSearch() {
       <>
         <form onSubmit={handleSubmit}>
           <div className="container mx-auto my-10 space-y-10">
-            <Alert/>
+            <Alert />
             <div className="form-control">
               <div className="input-group input-group-lg justify-center">
                 <input
