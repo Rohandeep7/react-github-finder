@@ -32,7 +32,7 @@ function Navbar({title,theme}) {
 
 Navbar.defaultProps={
     title:'Github Finder',
-    theme :'cyberpunk'
+    theme :'black'
 }
 
 Navbar.propTypes={

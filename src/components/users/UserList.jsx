@@ -1,21 +1,23 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react';
-import Spinner from '../shared/Spinner';
-import UserItem from './UserItem';
-import GithubContext from '../../context/github/GithubContext';
-import { useContext } from 'react';
+import React, { useEffect } from "react";
+import { useState } from "react";
+import Spinner from "../shared/Spinner";
+import UserItem from "./UserItem";
+import GithubContext from "../../context/github/GithubContext";
+import { useContext } from "react";
 function UserList() {
-  const {users,loading,searchUsers}=useContext(GithubContext)
+  const { users, loading } = useContext(GithubContext);
 
-  return !loading ?  (
+  return !loading ? (
     <>
-      <div className='grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10' >
-        {users.map((user)=>{
-            return <UserItem key={user.id} user={user}/>
+      <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+        {users.map((user) => {
+          return <UserItem key={user.id} user={user} />;
         })}
       </div>
     </>
-  ) : <Spinner/>
+  ) : (
+    <Spinner />
+  );
 }
 
-export default UserList
+export default UserList;
