@@ -3,12 +3,18 @@ import axios from 'axios'
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 
+// const config = {
+//   headers: {
+//       "Content-type": "application/json",
+//       'Authorization': `token ${GITHUB_TOKEN}`,
+//   },
+// }
 
 const github = axios.create({
   baseURL: GITHUB_URL,
   headers: {
-    Authorization: `token ${GITHUB_TOKEN}`,
-  },
+    'Authorization': `${GITHUB_TOKEN}`,
+  }
 });
 //Get all the users matching the specific search endpoint
 export const searchUsers = async (text) => {
@@ -17,7 +23,6 @@ export const searchUsers = async (text) => {
   });
 
   const response =await github.get(`/search/users?${params}`)
-  console.log(response.data.items);
   return response.data.items
   
 };

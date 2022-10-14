@@ -18,7 +18,6 @@ function UserProfile() {
   const getUserAndReposAsync=async ()=>{
       dispatch({ type: "SET_LOADING" });
       const data=await getUserAndRepos(params.login)
-      console.log(data)
       dispatch({ type: "GET_USER_AND_REPOS", payload: { data } });
   }
 

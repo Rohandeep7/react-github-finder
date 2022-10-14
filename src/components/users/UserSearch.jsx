@@ -15,7 +15,6 @@ function UserSearch() {
         else{
             dispatch({ type: "SET_LOADING" });
             const data=await searchUsers(input)
-            console.log(data)
             dispatch({ type: "GET_USERS", payload: { data} });
             setInput('')
         }

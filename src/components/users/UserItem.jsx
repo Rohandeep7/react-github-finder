@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import {Zoom} from '@mui/material'
 import Followers from "../shared/Followers";
-function UserItem({ user: { login, avatar_url, followers_url,followers } }) {
-  console.log(followers);
+function UserItem({ user: { login, avatar_url} }) {
   return (
     <Zoom in={true}>
       <div className="card shadow-md compact side bg-base-200">
