@@ -6,6 +6,7 @@ import GithubReducer from "../../context/github/GithubReducer";
 import { useReducer } from "react";
 import AlertContext from "../../context/alert/AlertContext";
 import Alert from "../layout/Alert";
+import {Fab} from '@mui/material'
 function UserSearch() {
     const [input,setInput]=useState('')
     const {users,searchUsers,clearUsers}=useContext(GithubContext)

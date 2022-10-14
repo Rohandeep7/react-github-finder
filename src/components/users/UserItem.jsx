@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import {Zoom} from '@mui/material'
-function UserItem({ user: { login, avatar_url } }) {
+import Followers from "../shared/Followers";
+function UserItem({ user: { login, avatar_url, followers_url,followers } }) {
+  console.log(followers);
   return (
     <Zoom in={true}>
       <div className="card shadow-md compact side bg-base-200">
@@ -21,6 +23,9 @@ function UserItem({ user: { login, avatar_url } }) {
             >
               Visit Profile
             </Link>
+          </div>
+          <div style={{float:'right'}}>
+          {/* <Followers url={followers_url} numOfFollowers={followers} /> */}
           </div>
         </div>
       </div>
