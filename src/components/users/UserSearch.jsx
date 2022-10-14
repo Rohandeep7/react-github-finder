@@ -1,25 +1,22 @@
-import React, { useState } from "react";
-import { useContext } from "react";
+import React, { useState, useContext } from "react";
 import GithubContext from "../../context/github/GithubContext";
-import {BiSearchAlt} from 'react-icons/bi'
-import GithubReducer from "../../context/github/GithubReducer";
-import { useReducer } from "react";
 import AlertContext from "../../context/alert/AlertContext";
 import Alert from "../layout/Alert";
-import {Fab} from '@mui/material'
+import {searchUsers} from '../../context/github/GithubActions'
 function UserSearch() {
     const [input,setInput]=useState('')
-    const {users,searchUsers,clearUsers}=useContext(GithubContext)
-    const {alert,setAlert}=useContext(AlertContext)
-    const [state,dispatch]=useReducer(GithubReducer,users)
-
-    const handleSubmit=(e)=>{
+    const {users,dispatch}=useContext(GithubContext)
+    const {setAlert} = useContext(AlertContext);
+    const handleSubmit=async (e)=>{
         e.preventDefault();
         if(input===''){
             setAlert('Please enter something','error')
         }
         else{
-            searchUsers(input)
+            dispatch({ type: "SET_LOADING" });
+            const data=await searchUsers(input)
+            console.log(data)
+            dispatch({ type: "GET_USERS", payload: { data} });
             setInput('')
         }
     }
@@ -62,7 +59,7 @@ function UserSearch() {
                 {users.length > 0 && (
                   <button
                     className="btn btn-lg text-white text-sm border-l-slate-700"
-                    onClick={clearUsers}
+                    onClick={()=>dispatch({type:'CLEAR_USERS'})}
                   >
                     Clear
                   </button>

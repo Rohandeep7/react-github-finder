@@ -1,4 +1,4 @@
-import "../styles.css";
+import '../styles.css'
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
@@ -14,7 +14,7 @@ function App() {
       <GithubProvider>
         <AlertProvider>
           <div className="flex flex-col justify-between h-screen">
-            <Navbar theme="dark" />
+            <Navbar  />
             <main className="container mx-auto px-3 pb-5">
               <Routes>
                 <Route exact path="/" element={<Home />} />

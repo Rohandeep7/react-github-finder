@@ -7,7 +7,7 @@ function Footer({theme}) {
       <div>
         <div className="grid grid-flow-col gap-4">
           <a href="https://github.com/Rohandeep7" target='blank'>
-          <FaGithub className='text-2xl'/>
+          <FaGithub className='text-2xl' />
           </a>
           <a href="https://www.instagram.com/ron.d_xo/" target='blank'>
             <FaInstagram className='text-2xl'/>
